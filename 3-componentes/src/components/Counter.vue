@@ -26,6 +26,7 @@
 		methods: {
 			add() {
 				this.number++;
+				this.$emit("addCounter", this.number);
 			},
 		},
 		computed: {

@@ -1,7 +1,7 @@
 <template>
 	<div class="center">
 		<counter></counter>
-		<Counter :propNumber="1" />
+		<Counter :propNumber="1" @addCounter="eventoHijo($event)" />
 	</div>
 </template>
 
@@ -19,6 +19,11 @@
 			console.log("Montado el HTML");
 		},
 		beforeDestroy() {},
+		methods: {
+			eventoHijo(number) {
+				console.log("Reciviendo evento hijo", number);
+			},
+		},
 	};
 </script>
 
